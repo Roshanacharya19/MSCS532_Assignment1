@@ -32,3 +32,24 @@ def insertion_sort_decreasing(inputArray):
     
     return inputArray
 
+
+# Test the algorithm
+if __name__ == "__main__":
+    # Test array from the textbook example
+    test_array = [5, 2, 4, 6, 1, 3]
+    print("Original array:", test_array)
+    
+    # Sort in decreasing order
+    sorted_array = insertion_sort_decreasing(test_array.copy())
+    print("Sorted array (decreasing):", sorted_array)
+    
+    # Additional test cases
+    test_cases = [
+        [31, 41, 59, 26, 41, 58],
+        [1, 2, 3, 4, 5],
+        [5, 4, 3, 2, 1]
+    ]
+    
+    for i, arr in enumerate(test_cases, 1):
+        print(f"\nTest {i}: {arr}")
+        print(f"Sorted: {insertion_sort_decreasing(arr.copy())}")
